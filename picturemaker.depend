@@ -1,0 +1,90 @@
+# depslib dependency file v1.0
+1548423199 source:d:\cour\picturemaker\light.cpp
+	"header/Light.h"
+
+1548424544 d:\cour\picturemaker\header\light.h
+
+1548611328 source:d:\cour\picturemaker\src\light.cpp
+	"Light.h"
+
+1548610485 d:\cour\picturemaker\include\light.h
+
+1548611335 source:d:\cour\picturemaker\src\mesh.cpp
+	"Mesh.h"
+
+1548617849 d:\cour\picturemaker\include\mesh.h
+	"Vector3d.h"
+	"Color.h"
+	"Ray.h"
+
+1423004728 d:\cour\picturemaker\include\vector3d.h
+	<math.h>
+
+1423004740 d:\cour\picturemaker\include\color.h
+	<math.h>
+
+1548617830 d:\cour\picturemaker\include\ray.h
+	"Vector3d.h"
+
+1548616933 source:d:\cour\picturemaker\src\ray.cpp
+	"Ray.h"
+
+1548612426 source:d:\cour\picturemaker\src\pointlight.cpp
+	"PointLight.h"
+
+1548612754 d:\cour\picturemaker\include\pointlight.h
+	"Light.h"
+	"Vector3d.h"
+
+1548624168 source:d:\cour\picturemaker\src\sphere.cpp
+	"Sphere.h"
+	"math.h"
+	"iostream"
+
+1548616934 d:\cour\picturemaker\include\sphere.h
+	"Vector3d.h"
+	"Ray.h"
+	"Color.h"
+	"Mesh.h"
+
+1548624269 source:d:\cour\picturemaker\main.cpp
+	<iostream>
+	"Scene.h"
+	"Sphere.h"
+
+1548618015 d:\cour\picturemaker\header\scene.h
+	"Vector3d.h"
+	"Mesh.h"
+	"vector"
+
+1423004728 d:\cour\picturemaker\header\vector3d.h
+	<math.h>
+
+1548616932 d:\cour\picturemaker\header\mesh.h
+	"Vector3d.h"
+	"Color.h"
+	"Ray.h"
+
+1423004740 d:\cour\picturemaker\header\color.h
+	<math.h>
+
+1548617778 source:d:\cour\picturemaker\src\bmpfile.cpp
+	"Bmpfile.h"
+	<cstdio>
+
+1548617778 d:\cour\picturemaker\include\bmpfile.h
+	<string>
+
+1548624621 source:d:\cour\picturemaker\src\scene.cpp
+	"Scene.h"
+	"Sphere.h"
+	"Bmpfile.h"
+	"Mesh.h"
+	"Ray.h"
+	"iostream"
+
+1548623240 d:\cour\picturemaker\include\scene.h
+	"Vector3d.h"
+	"Mesh.h"
+	"vector"
+
