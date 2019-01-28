@@ -2,7 +2,9 @@
 1548423199 source:d:\cour\picturemaker\light.cpp
 	"header/Light.h"
 
-1548424544 d:\cour\picturemaker\header\light.h
+1548685654 d:\cour\picturemaker\header\light.h
+	"Vector3d.h"
+	"Ray.h"
 
 1548611328 source:d:\cour\picturemaker\src\light.cpp
 	"Light.h"
@@ -29,15 +31,15 @@
 1548616933 source:d:\cour\picturemaker\src\ray.cpp
 	"Ray.h"
 
-1548612426 source:d:\cour\picturemaker\src\pointlight.cpp
-	"PointLight.h"
+1548685621 source:d:\cour\picturemaker\src\pointlight.cpp
+	"../header/PointLight.h"
 
 1548612754 d:\cour\picturemaker\include\pointlight.h
 	"Light.h"
 	"Vector3d.h"
 
-1548624168 source:d:\cour\picturemaker\src\sphere.cpp
-	"Sphere.h"
+1548687089 source:d:\cour\picturemaker\src\sphere.cpp
+	"../header/Sphere.h"
 	"math.h"
 	"iostream"
 
@@ -47,20 +49,22 @@
 	"Color.h"
 	"Mesh.h"
 
-1548624925 source:d:\cour\picturemaker\main.cpp
+1548691258 source:d:\cour\picturemaker\main.cpp
 	<iostream>
-	"Scene.h"
-	"Sphere.h"
+	"header/Scene.h"
+	"header/Sphere.h"
+	"header/PointLight.h"
 
-1548618015 d:\cour\picturemaker\header\scene.h
+1548691031 d:\cour\picturemaker\header\scene.h
 	"Vector3d.h"
 	"Mesh.h"
 	"vector"
+	"Light.h"
 
 1423004728 d:\cour\picturemaker\header\vector3d.h
 	<math.h>
 
-1548616932 d:\cour\picturemaker\header\mesh.h
+1548686864 d:\cour\picturemaker\header\mesh.h
 	"Vector3d.h"
 	"Color.h"
 	"Ray.h"
@@ -75,16 +79,33 @@
 1548617778 d:\cour\picturemaker\include\bmpfile.h
 	<string>
 
-1548624621 source:d:\cour\picturemaker\src\scene.cpp
-	"Scene.h"
-	"Sphere.h"
-	"Bmpfile.h"
-	"Mesh.h"
-	"Ray.h"
+1548691444 source:d:\cour\picturemaker\src\scene.cpp
+	"../header/Light.h"
+	"../header/Sphere.h"
+	"../header/Bmpfile.h"
+	"../header/Mesh.h"
+	"../header/Ray.h"
+	"../header/Scene.h"
 	"iostream"
 
 1548623240 d:\cour\picturemaker\include\scene.h
 	"Vector3d.h"
 	"Mesh.h"
 	"vector"
+
+1548687035 d:\cour\picturemaker\header\sphere.h
+	"Vector3d.h"
+	"Ray.h"
+	"Color.h"
+	"Mesh.h"
+
+1548617830 d:\cour\picturemaker\header\ray.h
+	"Vector3d.h"
+
+1548622180 d:\cour\picturemaker\header\bmpfile.h
+	<string>
+
+1548685631 d:\cour\picturemaker\header\pointlight.h
+	"Light.h"
+	"Vector3d.h"
 

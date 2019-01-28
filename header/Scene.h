@@ -13,6 +13,7 @@ using namespace std;
 #include "Mesh.h"
 #include "vector"
 #include "Light.h"
+
 class Scene {
 
 public:
@@ -22,6 +23,8 @@ public:
     CRTColor test_intersect(Ray & ray);
     void Render(float ScreenX, float ScreenY);
     Ray genray(float pixelX,float pixelY, float screenZ, CRTVector camera);
+    float calclumiere(Ray & rayon, CRTVector position, float distance);
+//    void calclumiere( Ray*,Mesh*,float);
 protected:
     vector<Mesh*> Meshes;
     vector<Light*> Lights;

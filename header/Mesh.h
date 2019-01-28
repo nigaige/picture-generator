@@ -16,7 +16,9 @@ class Mesh {
             color (col)
             {};
         virtual float intersect(Ray & ray) = 0;
-        virtual ~Mesh();
+        virtual CRTVector get_position() = 0;
+
+        //virtual ~Mesh();
         CRTColor get_color();
     protected:
         CRTColor color;

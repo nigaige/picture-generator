@@ -11,6 +11,8 @@
 #include "../header/Scene.h"
 #include "iostream"
 
+using namespace std;
+
 void Scene::addMesh(Mesh *mesh){
     Meshes.push_back(mesh);
 }
@@ -23,11 +25,32 @@ Scene::Scene(){
 }
 
 
+float Scene::calclumiere(Ray & rayon,CRTVector position, float distance){
+    float lumiere = 0;
+
+    CRTVector ptimpact(rayon.get_direction() * distance + rayon.get_position());
+
+    CRTVector N(ptimpact - position);//normal a sphere au point
+    N.Normalize();
+    for (int i =0; i <Lights.size(); i++){
+        CRTVector Li(ptimpact - Lights[i]->get_position());//vecteur entre point et lumière
+        Li.Normalize();
+        float pdscl = Li.Dot(N);
+        if (pdscl>0){
+            lumiere += pdscl;
+        }
+    }
+    if (lumiere > 1){
+        lumiere = 1;
+    }
+    return lumiere;
+}
 
 CRTColor Scene::test_intersect(Ray & ray){
     int index_mesh = -1;
     float distance_buffer = RT_INFINITE;
     float distance = -1;
+    float lumiere = 0;
     CRTColor color(0,0,0);
 
     for (unsigned int i = 0; i <Meshes.size(); i++){
@@ -39,7 +62,10 @@ CRTColor Scene::test_intersect(Ray & ray){
         }
     }
     if (index_mesh != -1){
+        lumiere = calclumiere(ray,Meshes[index_mesh]->get_position(), distance_buffer);
+
         color = Meshes[index_mesh]->get_color();
+        color *= lumiere;
     }
     return color;
 }
@@ -56,7 +82,7 @@ void Scene::Render(float ScreenX, float ScreenY){
     unsigned char * buffer = new unsigned char[(int)ScreenX*(int)ScreenY*3];
 
     for (int i =0; i < ScreenX; i++){
-            cout<<"ligne:"<<i;
+            //cout<<"ligne:"<<i;
             for(int j = 0; j < ScreenY;j++){
                 //Ray pixel = genray(ScreenX/i,ScreenY/j,0, CRTVector(0,0,0));
 

@@ -2,7 +2,7 @@
 // Created by nicol on 25/01/2019.
 //
 
-#include "Sphere.h"
+#include "../header/Sphere.h"
 #include "math.h"
 #include "iostream"
 
@@ -33,4 +33,8 @@ float Sphere::intersect(Ray & ray){
         return (-B-float(sqrt(delta)))/(2.0f * A);
     }
 
+}
+
+CRTVector Sphere::get_position(){
+    return position;
 }

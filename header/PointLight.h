@@ -5,15 +5,19 @@
 #ifndef UNTITLED_POINTLIGHT_H
 #define UNTITLED_POINTLIGHT_H
 
+#include "Light.h"
+#include "Vector3d.h"
 
-class PointLight public Light{
+
+class PointLight: public Light{
 public:
-    Light(CRTVector A):
-        point (A)
+    PointLight(CRTVector Position):
+        position (Position)
         {}
+    CRTVector get_position();
 
 protected:
-CRTVector point;
+    CRTVector position;;
 };
 
 

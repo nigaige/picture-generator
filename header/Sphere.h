@@ -16,10 +16,9 @@ public:
         Mesh(col),
         position    (pos),
         rayon       (r)
-        {
-
-        }
+        {}
     float intersect(Ray & ray);
+    CRTVector get_position();
 protected:
     CRTVector position;
     float rayon;

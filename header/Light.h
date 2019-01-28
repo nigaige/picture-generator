@@ -6,15 +6,11 @@
 #define UNTITLED_LIGHT_H
 
 #include "Vector3d.h"
-
+#include "Ray.h"
 class Light {
 public:
-
+    virtual CRTVector get_position() = 0;
 protected:
-    int color;
-    int power;
-    CRTVector position;
-
 };
 
 
