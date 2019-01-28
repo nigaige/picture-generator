@@ -7,23 +7,23 @@
 
 #include "Vector3d.h"
 #include "Ray.h"
+#include "Color.h"
+#include "Mesh.h"
 
-class Sphere {
+class Sphere : public Mesh{
 public:
     Sphere (CRTVector pos, float r, CRTColor col):
+        Mesh(col),
         position    (pos),
         rayon       (r)
         {
-            Mesh(col);
+
         }
-    float intersect(const Ray & ray);
+    float intersect(Ray & ray);
 protected:
     CRTVector position;
     float rayon;
-    float intersect(const Ray & ray){
 
-}
 };
-
 
 #endif //UNTITLED_SPHERE_H

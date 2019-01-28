@@ -5,6 +5,7 @@
 #ifndef UNTITLED_LIGHT_H
 #define UNTITLED_LIGHT_H
 
+#include "Vector3d.h"
 
 class Light {
 public:
@@ -12,6 +13,7 @@ public:
 protected:
     int color;
     int power;
+    CRTVector position;
 
 };
 

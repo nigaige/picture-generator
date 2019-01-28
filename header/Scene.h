@@ -12,16 +12,19 @@ using namespace std;
 #include "Vector3d.h"
 #include "Mesh.h"
 #include "vector"
+#include "Light.h"
 class Scene {
 
 public:
     Scene();
     void addMesh(Mesh *mesh);
+    void addLight(Light *light);
     CRTColor test_intersect(Ray & ray);
-    void Render(int ScreenX, int ScreenY);
-    Ray genray(float pixelX,float pixelY, float screenZ, CRTVector camera)
+    void Render(float ScreenX, float ScreenY);
+    Ray genray(float pixelX,float pixelY, float screenZ, CRTVector camera);
 protected:
     vector<Mesh*> Meshes;
+    vector<Light*> Lights;
 
 };
 

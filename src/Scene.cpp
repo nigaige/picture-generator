@@ -3,15 +3,19 @@
 //
 
 
-#include "Scene.h"
-#include "Sphere.h"
-#include "Bmpfile.h"
-#include "Mesh.h"
-#include "Ray.h"
+#include "../header/Light.h"
+#include "../header/Sphere.h"
+#include "../header/Bmpfile.h"
+#include "../header/Mesh.h"
+#include "../header/Ray.h"
+#include "../header/Scene.h"
 #include "iostream"
 
 void Scene::addMesh(Mesh *mesh){
     Meshes.push_back(mesh);
+}
+void Scene::addLight(Light *light){
+    Lights.push_back(light);
 }
 
 Scene::Scene(){
