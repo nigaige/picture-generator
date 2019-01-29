@@ -25,7 +25,7 @@ Scene::Scene(){
 }
 
 
-float Scene::calclumiere(Ray & rayon,CRTVector position, float distance){
+float Scene::calclumiere(Ray & rayon,CRTVector position, float distance,int index){
     float lumiere = 0;
 
     CRTVector ptimpact(rayon.get_direction() * distance + rayon.get_position());
@@ -36,9 +36,20 @@ float Scene::calclumiere(Ray & rayon,CRTVector position, float distance){
         CRTVector Li(ptimpact - Lights[i]->get_position());//vecteur entre point et lumière
         Li.Normalize();
         float pdscl = Li.Dot(N);
-        if (pdscl>0){
+        int bufferclose = index;
+        int bufferdist = RT_INFINITE;
+        for(int j=0;j<Meshes.size();j++){
+                Ray rayoflight(Lights[i]->get_position(), -Li);
+                float impact = Meshes[j]->intersect(rayoflight);
+                if (impact < bufferdist){
+                    bufferclose = j;
+                    bufferdist = impact;
+                }
+        }
+        if (pdscl>0 && bufferclose == index){
             lumiere += pdscl;
         }
+
     }
     if (lumiere > 1){
         lumiere = 1;
@@ -62,7 +73,7 @@ CRTColor Scene::test_intersect(Ray & ray){
         }
     }
     if (index_mesh != -1){
-        lumiere = calclumiere(ray,Meshes[index_mesh]->get_position(), distance_buffer);
+        lumiere = calclumiere(ray,Meshes[index_mesh]->get_position(), distance_buffer, index_mesh);
 
         color = Meshes[index_mesh]->get_color();
         color *= lumiere;

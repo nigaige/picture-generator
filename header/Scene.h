@@ -23,7 +23,7 @@ public:
     CRTColor test_intersect(Ray & ray);
     void Render(float ScreenX, float ScreenY);
     Ray genray(float pixelX,float pixelY, float screenZ, CRTVector camera);
-    float calclumiere(Ray & rayon, CRTVector position, float distance);
+    float calclumiere(Ray & rayon, CRTVector position, float distance,int index);
 //    void calclumiere( Ray*,Mesh*,float);
 protected:
     vector<Mesh*> Meshes;

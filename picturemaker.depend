@@ -49,13 +49,13 @@
 	"Color.h"
 	"Mesh.h"
 
-1548691258 source:d:\cour\picturemaker\main.cpp
+1548753264 source:d:\cour\picturemaker\main.cpp
 	<iostream>
 	"header/Scene.h"
 	"header/Sphere.h"
 	"header/PointLight.h"
 
-1548691031 d:\cour\picturemaker\header\scene.h
+1548750273 d:\cour\picturemaker\header\scene.h
 	"Vector3d.h"
 	"Mesh.h"
 	"vector"
@@ -79,7 +79,7 @@
 1548617778 d:\cour\picturemaker\include\bmpfile.h
 	<string>
 
-1548691444 source:d:\cour\picturemaker\src\scene.cpp
+1548753323 source:d:\cour\picturemaker\src\scene.cpp
 	"../header/Light.h"
 	"../header/Sphere.h"
 	"../header/Bmpfile.h"
